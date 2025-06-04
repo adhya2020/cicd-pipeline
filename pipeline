@@ -24,12 +24,7 @@ pipeline {
                 }
             }
         }
-        stage("Deploy"){
-            steps {
-                echo "Deploying the conatiner"
-                sh "docker run -d -p 3001:3001 sumeetkulkarni/my-note-app:latest"
-            }
-        }
+        
           stage('Deploy to Kubernets'){
              steps{
                  script{
